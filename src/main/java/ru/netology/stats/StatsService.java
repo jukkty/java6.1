@@ -12,12 +12,7 @@ public class StatsService {
 
     // Второе задание (Найти среднее значение от всех продаж)
     public long calculateAverage(long[] purchases) {
-        long sum = 0;
-        for (long purchase : purchases) {
-            sum += purchase;
-        }
-        long average = sum / purchases.length;
-        return average;
+        return calculateSum(purchases) / purchases.length;
     }
 
     // Третье задание (Найти месяц с максимальными продажами)
@@ -50,14 +45,9 @@ public class StatsService {
     }
     // Пятое задание (Найти количество месяцев с продажами ниже среднего)
     public long findMonthBelowAverage(long[] purchases) {
-        long sum = 0;
-        for (long purchase : purchases) {
-            sum += purchase;
-        }
-        long average = sum / purchases.length;
         long month = 0;
         for (long belowAverage : purchases) {
-            if (belowAverage < average){
+            if (belowAverage < calculateAverage(purchases)){
                 month++;
             }
         }
@@ -65,17 +55,13 @@ public class StatsService {
     }
     // Шестое задание (Найти количество месяцев с продажами выше среднего)
     public long findMonthAboveAverage(long[] purchases) {
-        long sum = 0;
-        for (long purchase : purchases) {
-            sum += purchase;
-        }
-        long average = sum / purchases.length;
         long month = 0;
         for (long aboveAverage : purchases) {
-            if (aboveAverage > average){
+            if (aboveAverage > calculateAverage(purchases)){
                 month++;
             }
         }
         return month;
     }
 }
+
