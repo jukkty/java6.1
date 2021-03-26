@@ -46,8 +46,9 @@ public class StatsService {
     // Пятое задание (Найти количество месяцев с продажами ниже среднего)
     public long findMonthBelowAverage(long[] purchases) {
         long month = 0;
+        long avg = calculateAverage(purchases);
         for (long belowAverage : purchases) {
-            if (belowAverage < calculateAverage(purchases)){
+            if (belowAverage < avg){
                 month++;
             }
         }
@@ -56,8 +57,9 @@ public class StatsService {
     // Шестое задание (Найти количество месяцев с продажами выше среднего)
     public long findMonthAboveAverage(long[] purchases) {
         long month = 0;
+        long avg = calculateAverage(purchases);
         for (long aboveAverage : purchases) {
-            if (aboveAverage > calculateAverage(purchases)){
+            if (aboveAverage > avg){
                 month++;
             }
         }
