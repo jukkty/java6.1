@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 //1 задание
-class StatsServiceSum {
+class StatsServiceTest {
+
     @Test
     void calculateSum() {
         StatsService service = new StatsService();
@@ -14,9 +15,9 @@ class StatsServiceSum {
         long actual = service.calculateSum(purchases);
         assertEquals(expected, actual);
     }
-}
+
 //2 задание
-class StatsServiceAverage {
+
     @Test
     void calculateAverage() {
         StatsService service = new StatsService();
@@ -26,9 +27,9 @@ class StatsServiceAverage {
         assertEquals(expected, actual);
     }
 
-}
+
 //3 задание
-class StatsServiceMax {
+
     @Test
     void findMax() {
         StatsService service = new StatsService();
@@ -37,9 +38,9 @@ class StatsServiceMax {
         long actual = service.findMax(purchases);
         assertEquals(expected, actual);
     }
-}
+
 //4 задание
-class StatsServiceMin {
+
     @Test
     void findMin() {
         StatsService service = new StatsService();
@@ -48,9 +49,9 @@ class StatsServiceMin {
         long actual = service.findMin(purchases);
         assertEquals(expected, actual);
     }
-}
+
 //5 задание
-class StatsServiceBelowAverage {
+
     @Test
     void findMonthBelowAverage() {
         StatsService service = new StatsService();
@@ -59,9 +60,9 @@ class StatsServiceBelowAverage {
         long actual = service.findMonthBelowAverage(purchases);
         assertEquals(expected, actual);
     }
-}
+
 //6 задание
-class StatsServiceAboveAverage {
+
     @Test
     void findMonthAboveAverage() {
         StatsService service = new StatsService();
